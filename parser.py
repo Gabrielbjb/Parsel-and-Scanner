@@ -282,5 +282,7 @@ while    a < b:
 """
 hasil = []
 stack = []
+print("Input Teks:")
+print(teks, "\n")
 getToken(teks,hasil) # FA - ANALISIS LEKSIKAL
 parser(hasil,stack)
