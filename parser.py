@@ -273,12 +273,8 @@ def parser(listToken, stack):
 stack = []
 
 teks = """
-
-
-while    a < b:
-
-  a = a + b
-  a = b +b
+while a < b:
+    a = a + b
 """
 hasil = []
 stack = []
