@@ -143,7 +143,7 @@ def getToken(teks, hasil):
             else:
                 sementara += teks[i]
         i += 1
-    print(hasil)
+
 
 def push(stack, token):
     stack.append(token)
