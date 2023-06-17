@@ -46,10 +46,23 @@ def getToken(teks, hasil):
             hasil.append(teks[i])
             sementara = ''
         elif teks[i] == '*':
-            if sementara != '':
-                hasil.append(sementara)
-            hasil.append(teks[i])
-            sementara = ''
+            if i+1 < len(teks):
+                if teks[i+1] == '*':
+                    if sementara != '':
+                        hasil.append(sementara)
+                    hasil.append("**")
+                    sementara = ''
+                    i += 1
+                else:
+                    if sementara != '':
+                        hasil.append(sementara)
+                    hasil.append(teks[i])
+                    sementara = ''
+            else:
+                if sementara != '':
+                    hasil.append(sementara)
+                hasil.append(teks[i])
+                sementara = ''
         elif teks[i] == '/':
             if sementara != '':
                 hasil.append(sementara)
@@ -274,7 +287,12 @@ stack = []
 
 teks = """
 while a < b:
-    a = a + b
+
+
+    a = a**a
+    a = a - b
+
+
 """
 hasil = []
 stack = []
