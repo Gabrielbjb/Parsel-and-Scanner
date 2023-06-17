@@ -121,11 +121,15 @@ def getToken(teks, hasil):
             else:
                 sementara += teks[i]
         i += 1
-    print(hasil)
+
 
 teks = """
 while a < b:
     a = a + b
 """
+print("Input Teks:")
+print(teks,"\n")
 hasil = []
 getToken(teks,hasil) # FA - ANALISIS LEKSIKAL
+for i in hasil:
+    print(i)
