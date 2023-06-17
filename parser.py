@@ -162,7 +162,6 @@ def parser(listToken, stack):
         accepted = True
         current_spacing = "<unchanged>"
         while top(stack) != "#" and i < len(listToken):
-            print(stack, "current i:", i, "Total:",len(listToken))
             if top(stack) == "<statement>":
                 pop(stack)
                 push(stack, "<aksi>")
