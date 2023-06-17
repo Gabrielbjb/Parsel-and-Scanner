@@ -128,7 +128,7 @@ while a < b:
     a = a + b
 """
 print("Input Teks:")
-print(teks,"\n")
+print(teks,"\n", "Hasil:\n")
 hasil = []
 getToken(teks,hasil) # FA - ANALISIS LEKSIKAL
 for i in hasil:
